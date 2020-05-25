@@ -10,6 +10,7 @@ from .views import (
     CategoryUpdateView,
     CategoryDestroyView,
     TodoListDestroyView,
+    TotoAPIView
 )
 
 
@@ -24,4 +25,5 @@ urlpatterns = [
     path('category/<int:pk>/update/', CategoryUpdateView.as_view()),
     path('todo/<int:pk>/delete/', TodoListDestroyView.as_view()),
     path('category/<int:pk>/delete/', CategoryDestroyView.as_view()),
+    path('cache/', TotoAPIView.as_view())
 ]
